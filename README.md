@@ -1,5 +1,5 @@
 # arm64_to_iossimulator
-Patch script to run decrypted IOS-Apps with IOS simulator.
+Patch script to run decrypted IOS apps with IOS simulator.
 
 <p align="center">
   <img width="30%" height="30%" src="IOS_Simulator_Screen.png?raw=true" alt="FQLite Screenshot"/>
@@ -36,14 +36,14 @@ bash script. The app can then be easily patched with the following command:
 ```bash
 ./patchit.sh <myappname.app>
 ```
-The customized .app file can then be transferred to a started simulator instance using drag & drop. 
+The customized _.app_ file can then be transferred to a started simulator instance using drag & drop. 
 The app should then start normally. 
 
 # What does the program actually do?
 The script automatically searches for the binary files within the app and adjusts the header information 
 in these files. The binary format of executable files under MacOS and IOS is [Mach-O](https://en.wikipedia.org/wiki/Mach-O). The target platform 
-is adapted from IPhoneOS (value 0x6) to IOS Simulator (value 0x7). The static and dynamic libraries in the Frameworks directory are also adapted.
-The info.plist file, which is used to manage the app's basic configur   |ation settings, is also patched. 
+is adapted from IPhoneOS (value **0x6**) to IOS Simulator (value **0x7**). The static and dynamic libraries in the Frameworks directory are also adapted.
+The _info.plist_ file, which is used to manage the app's basic configuration settings, is also patched. 
 The customized files must also be signed again afterwards. The script also takes care of this. The script was successfully tested with the following apps:
 
 | App  | Version | Success   | Comment    |
