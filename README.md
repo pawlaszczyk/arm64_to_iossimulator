@@ -43,5 +43,7 @@ is adapted from IPhoneOS (value 0x6) to IOS Simulator (value 0x7). The static an
 The info.plist file, which is used to manage the app's basic configuration settings, is also adjusted. 
 The customized files must also be signed again afterwards. The script also takes care of this. 
 
-
+| App  | Version | Success   | Comment    |
+| :---:   | :---: | :---: |  :---: |
+| Seconds | 301   | 283  | 
 
