@@ -1,6 +1,10 @@
 # arm64_to_iossimulator
 Patch script to run decrypted IOS-Apps with IOS simulator.
 
+<p align="center">
+  <img width="95%" height="95%" src="IOS_Simulator_Screen.png?raw=true" alt="FQLite Screenshot"/>
+</p>
+
 # Background
 This small script allows you to run third party apps written for 
 IPhone and IPad on the IOS Simulator. It is necessary for security 
