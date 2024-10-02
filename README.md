@@ -2,7 +2,7 @@
 Patch script to run decrypted IOS-Apps with IOS simulator.
 
 <p align="center">
-  <img width="95%" height="95%" src="IOS_Simulator_Screen.png?raw=true" alt="FQLite Screenshot"/>
+  <img width="30%" height="30%" src="IOS_Simulator_Screen.png?raw=true" alt="FQLite Screenshot"/>
 </p>
 
 # Background
@@ -15,7 +15,7 @@ app that was developed for IOS so that it runs on the IOS Simulator.
 
 To do this, however, we first need a decrypted app. Each IOS app that is 
 downloaded from the App Store is protected 
-by the so-called Fairplay DRM. The source code of the respective app is 
+by the so-called [Fairplay DRM](https://developer.bitmovin.com/playback/docs/how-does-fairplay-work) . The source code of the respective app is 
 encrypted with the hardware key of the target device. Accordingly, the app must be 
 decrypted before it can be installed on the simulator.  Fortunately, there are a 
 number of tools that allow the app to be decrypted. However, this requires a device 
@@ -30,8 +30,7 @@ A number of conditions must  be met for the successful porting of a decrypted ap
 - Xcode Command Line Tools are installed. 
 
 # Run the Script
-To run the script you need to open a terminal first. To execute the script, a cli must 
-first be started. The app to be patched should be located in the same directory as the 
+To run the script you need to open a terminal first. The app to be patched should be located in the same directory as the 
 bash script. The app can then be easily patched with the following command:
 
 ```bash
@@ -44,10 +43,16 @@ The app should then start normally.
 The script automatically searches for the binary files within the app and adjusts the header information 
 in these files. The binary format of executable files under MacOS and IOS is [Mach-O](https://en.wikipedia.org/wiki/Mach-O). The target platform 
 is adapted from IPhoneOS (value 0x6) to IOS Simulator (value 0x7). The static and dynamic libraries in the Frameworks directory are also adapted.
-The info.plist file, which is used to manage the app's basic configuration settings, is also adjusted. 
-The customized files must also be signed again afterwards. The script also takes care of this. 
+The info.plist file, which is used to manage the app's basic configur   |ation settings, is also patched. 
+The customized files must also be signed again afterwards. The script also takes care of this. The script was successfully tested with the following apps:
 
 | App  | Version | Success   | Comment    |
 | :---:   | :---: | :---: |  :---: |
-| Seconds | 301   | 283  | 
-
+| Youtube | 19.34.2   |  Yes  |        | 
+| Discord | 247.0      |  Yes  |        | 
+| TikTok  |       |  Yes  |        |
+| X(Twitter) |9.2 | Yes |       |
+| WeChat | | Yes |  |
+| Tinder | 15.17.0 | Yes |  |
+| SQliteFlow || Yes |    |
+ 
