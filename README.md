@@ -64,3 +64,4 @@ _"... Termination Reason: DYLD 4 Symbol missing Symbol not found: __MXSignpostMe
   <img width="70%" height="70%" src="ScreenShot_MXSignPost.png?raw=true" alt="Screenshot of MXSignpost_Private.h"/>
 </p>
 
+The library provided by Apple for creating metrics provides a function called **_MXSignpostMetricsSnapshot** in IOS, which is apparently not offered under IOS Simulator. 
