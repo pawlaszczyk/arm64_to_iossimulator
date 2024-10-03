@@ -58,9 +58,9 @@ The customized files must also be signed again afterwards. The script also takes
 
 # Known Issues
 A number of apps crash on startup after patching. This is the case for Instagram, Facebook or WhatsApp, for example. The apps are chrashing with
-"... Termination Reason: DYLD 4 Symbol missing Symbol not found: __MXSignpostMetricsSnapshot". The reason for this crash becomes clear when we look at the MXSignpost_Private.h file:
+_"... Termination Reason: DYLD 4 Symbol missing Symbol not found: __MXSignpostMetricsSnapshot"_. The reason for this crash becomes clear when we look at the **MXSignpost_Private.h** file:
 
 <p align="center">
-  <img width="30%" height="30%" src="ScreenShot_MXSignPost.png?raw=true" alt="Screenshot of MXSignpost_Private.h"/>
+  <img width="70%" height="70%" src="ScreenShot_MXSignPost.png?raw=true" alt="Screenshot of MXSignpost_Private.h"/>
 </p>
 
