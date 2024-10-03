@@ -42,9 +42,9 @@ The app should then start normally.
 # What does the program actually do?
 The script automatically searches for the binary files within the app and adjusts the header information 
 in these files. The binary format of executable files under MacOS and IOS is [Mach-O](https://en.wikipedia.org/wiki/Mach-O). The target platform 
-is adapted from IPhoneOS (value **0x6**) to IOS Simulator (value **0x7**). The static and dynamic libraries in the Frameworks directory are also adapted.
-The _info.plist_ file, which is used to manage the app's basic configuration settings, is also patched. 
-The customized files must also be signed again afterwards. The script also takes care of this. The script was successfully tested with the following apps:
+is adapted from IPhoneOS (value **0x6**) to IOS Simulator (value **0x7**). The dynamic libraries in the Frameworks directory are also patched.
+The _info.plist_ file, which is used to manage the app's basic configuration settings, is patched. 
+The customized files must be signed afterwards. The script also takes care of this. The script was successfully tested with the following apps:
 
 | App  | Version | Success   | Comment    |
 | :---:   | :---: | :---: |  :---: |
